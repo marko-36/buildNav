@@ -20,7 +20,7 @@ sqlcon1.connect(function(err) {
     };
 });
 
-function BuildNavMain(SqlConX, access, thisnavid, locale='en', cb){
+function buildNav(SqlConX, access, thisnavid, locale='en', cb){ //2018-11-30a
   var level = 1;
   var isnode = false;
   var navhtml = '<ul id="nav_main">'//<!--li><a class="_amenu"" href="javascript:void(0);">&nbsp;</a></li-->';
@@ -102,5 +102,5 @@ function BuildNavMain(SqlConX, access, thisnavid, locale='en', cb){
 };   
 
 console.log('before');
-console.log('result:'+BuildNavMain(sqlcon1, 1, 11000000, 'en'));            //ASYNC, so no result here (undefined')!
+console.log('result:'+buildNav(sqlcon1, 1, 11000000, 'en'));            //ASYNC, so no result here (undefined')!
 console.log('after');
